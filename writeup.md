@@ -19,19 +19,19 @@ The goals / steps of this project are the following:
 
 ---
 
-### Reflection
-
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+### Reflection on pipelines and project 
 
 My pipeline consisted of 7 steps. First, I
 1) split up the image into R,G,B channels and applied different thresholds
 to channels in order to eliminate the noise primarely on challenge video. Then I combined all the channels together again in the image. The result image lookes like this:
-[image2]: ./examples/file120.jpg "Filtered image"
+
+<img src="examples/file120.jpg" width="480" alt="Filtered image" />
+
 You can see how most of the noise is gone (this is one of the challenge video's frames)
 
 Then I: 
-2) converted the image into a grayscale one, 
-3) de-noised it by appying Gaussian kernel with size = 5,
+2) converted the image into a grayscale one
+3) de-noised it by appying Gaussian kernel with size = 5
 4) applied Canny edge detection algorithm to get all edges
 5) applied region of interest to filter out features which
 do not belong to a lane. The region of interest is built relative to
@@ -49,7 +49,7 @@ and one point on a line
 5) drawing a line from bottom intersection points to (top, left) and (top, right) points of segments
 
 
-### 2. Identify potential shortcomings with your current pipeline
+### 2. Potential shortcomings with my current pipeline
 
 
 There are several potential shortcomings related to the approach I've chosen:
@@ -61,7 +61,7 @@ by applying filters.
 4. This pipeline would not work great under conditions where gradient between lanes and a road surface is not substantial: like white lanes on concrete surface
 
 
-### 3. Suggest possible improvements to your pipeline
+### 3. Possible improvements to my pipeline
 
 A possible improvement would be to apply a geomtetric model to a line detection, they all have distinct geometric 
 shapes: solid, dotted lines, the gaps between segments are farely regular and I believe are mostly maintained as it impacts driver safety. 
