@@ -28,7 +28,7 @@ to channels in order to eliminate the noise (primarely on challenge video). Then
 
 <img src="examples/file120.jpg" width="480" alt="Filtered image" />
  
-2) converted the image into a grayscale one
+2) Then I converted the image into a grayscale one
 3) de-noised it by appying Gaussian kernel with size = 5
 4) applied Canny edge detection algorithm to get all edges
 5) applied region of interest to filter out features which do not belong to a lane. The region of interest is built relative to an image size to work in images of different resolutions
