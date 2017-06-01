@@ -22,20 +22,16 @@ The goals / steps of this project are the following:
 ### Reflection on pipelines and project 
 
 My pipeline consisted of 7 steps. First, I
-1) split up the image into R,G,B channels and applied different thresholds
-to channels in order to eliminate the noise primarely on challenge video. Then I combined all the channels together again in the image. The result image lookes like this:
+1) split the image up into R,G,B channels and applied different thresholds
+to channels in order to eliminate the noise (primarely on challenge video). Then I combined all the channels together again in the image. The result image lookes like this (You can see how most of the noise is gone (this is one of the challenge video's frames)
+):
 
 <img src="examples/file120.jpg" width="480" alt="Filtered image" />
-
-You can see how most of the noise is gone (this is one of the challenge video's frames)
-
-Then I: 
+ 
 2) converted the image into a grayscale one
 3) de-noised it by appying Gaussian kernel with size = 5
 4) applied Canny edge detection algorithm to get all edges
-5) applied region of interest to filter out features which
-do not belong to a lane. The region of interest is built relative to
-an image size to work in images of different resolutions
+5) applied region of interest to filter out features which do not belong to a lane. The region of interest is built relative to an image size to work in images of different resolutions
 6) applied Hough operator to get the segments on a same lines
 7) and overlayed them on top of an original picture with some trasparency mask
  
